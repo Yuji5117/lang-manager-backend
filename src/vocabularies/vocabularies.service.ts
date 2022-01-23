@@ -5,16 +5,12 @@ import { Vocabulary } from './vocabularies.entity';
 
 @Injectable()
 export class VocabulariesService {
-  // constructor(
-  //   @InjectRepository(Vocabulary)
-  //   private vocabulariesRepository: Repository<Vocabulary>,
-  // ) {}
+  constructor(
+    @InjectRepository(Vocabulary)
+    private vocabulariesRepository: Repository<Vocabulary>,
+  ) {}
 
-  // findAll(): Vocabulary[] {
-  findAll() {
-    // return this.vocabulariesRepository.find();
-    return [
-      { id: 1, word: 'English', translatedWord: '英語', image: 'test.jpg' },
-    ];
+  findAll(): Promise<Vocabulary[]> {
+    return this.vocabulariesRepository.find();
   }
 }

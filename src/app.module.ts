@@ -5,8 +5,7 @@ import { AppService } from './app.service';
 import { VocabulariesModule } from './vocabularies/vocabularies.module';
 
 @Module({
-  // imports: [TypeOrmModule.forRoot(), VocabulariesModule],
-  imports: [VocabulariesModule],
+  imports: [TypeOrmModule.forRoot(), VocabulariesModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -1,13 +1,13 @@
-// import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-// @Entity()
+@Entity()
 export class Vocabulary {
-  // @PrimaryGeneratedColumn()
-  // id: number;
-  // @Column()
-  // word: string;
-  // @Column()
-  // translatedWord: string;
-  // @Column()
-  // image: string;
+  @PrimaryGeneratedColumn()
+  id: number;
+  @Column()
+  word: string;
+  @Column()
+  translatedWord: string;
+  @Column()
+  image: string;
 }

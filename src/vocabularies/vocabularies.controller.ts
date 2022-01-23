@@ -7,8 +7,7 @@ export class VocabulariesController {
   constructor(private vocabulariesService: VocabulariesService) {}
 
   @Get()
-  // findAll(): Promise<Vocabulary[]> {
-  findAll() {
+  findAll(): Promise<Vocabulary[]> {
     return this.vocabulariesService.findAll();
   }
 }
